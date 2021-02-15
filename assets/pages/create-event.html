@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New Event</title>
+    <link rel="stylesheet" href="../styles/create-event/css/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="error hidden">
+        <div class="error__text">
+          Failed to create an event. Time slot is already booked.
+        </div>
+        <img class="error__close" src="../icons/close-icon.png" />
+      </div>
+      <div class="form">
+        <div class="item">
+          <div class="item__title">Name of the event:</div>
+          <input class="item__input" />
+        </div>
+        <div class="item">
+          <div class="item__title">Participants:</div>
+          <div class="item-selection members-select">
+            <span class="selection__text">Select participants</span>
+            <a class="selection__button select-members">
+              <span class="selection__arrow"></span>
+            </a>
+            <div class="dropdown-holder members-holder"></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__title">Day:</div>
+          <div class="item-selection day-select">
+            <span class="selection__text">Monday</span>
+            <a class="selection__button select-day">
+              <span class="selection__arrow"></span>
+            </a>
+            <div class="dropdown-holder day-holder"></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__title">Time:</div>
+          <div class="item-selection time-select">
+            <span class="selection__text">10:00</span>
+            <a class="selection__button select-time">
+              <span class="selection__arrow"></span>
+            </a>
+            <div class="dropdown-holder time-holder"></div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <a href="../../calendar.html" class="custom-buttton cancel-button">
+          Cancel
+        </a>
+        <a href="../../calendar.html" class="custom-buttton create-button">
+          Create
+        </a>
+      </div>
+    </div>
+    <script type="module" src="../scripts/create-event/index.js"></script>
+  </body>
+</html>

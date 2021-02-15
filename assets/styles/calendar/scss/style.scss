@@ -1,0 +1,226 @@
+@import '../../global/reset.scss';
+@import '../../global/variables.scss';
+
+body {
+  padding: 50px 60px 20px 60px;
+}
+
+.head {
+  height: 100px;
+  width: 1800px;
+  display: flex;
+  align-items: center;
+
+  .page-title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+  }
+
+  .buttons-container {
+    height: 50px;
+    width: 860px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+
+  .custom {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border: 2px solid $border-color__black;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .selection {
+    width: 400px;
+    font-size: $font-size-medium;
+
+    &__text {
+      margin-left: 10px;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      min-width: 60px;
+      margin-left: auto;
+      background-color: $background-color__grey;
+      border-left: 2px solid $border-color__black;
+    }
+
+    &__arrow {
+      height: 0;
+      width: 0;
+      border-top: 10px solid #000;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+    }
+
+    &__arrow.open {
+      height: 0;
+      width: 0;
+      border: none;
+      border-bottom: 10px solid #000;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+    }
+  }
+
+  .create-event {
+    width: 360px;
+    justify-content: center;
+    background-color: $background-color__grey;
+    font-size: $font-size-medium;
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+.dropdown-holder {
+  display: none;
+  position: absolute;
+  margin-left: -2px;
+  top: 132px;
+}
+
+.open {
+  display: block;
+}
+
+.dropdown {
+  color: black;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 400px;
+    background-color: white;
+    border: 1px solid $border-color__black;
+    border-right: 2px solid $border-color__black;
+    border-left: 2px solid $border-color__black;
+
+    overflow: hidden;
+
+    &:first-child {
+      border-top: none;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    &:last-child {
+      border-bottom: 2px solid $border-color__black;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-medium;
+    margin-left: 10px;
+  }
+
+  &__select {
+    height: 18px;
+    width: 18px;
+    margin: 0 21px 0 auto;
+  }
+}
+
+.content {
+  .table {
+    height: 760px;
+    width: 1800px;
+    font-size: $font-size-medium;
+  }
+
+  .table-title-row {
+    background-color: $background-color__grey;
+
+    .table__cell {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .row {
+    display: flex;
+
+    &:last-child {
+      border-bottom: 2px solid $border-color__grey;
+    }
+  }
+
+  .table__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 73px;
+    width: 300px;
+    text-align: center;
+    border-top: 2px solid $border-color__grey;
+    border-left: 2px solid $border-color__grey;
+
+    &:last-child {
+      border-right: 2px solid $border-color__grey;
+    }
+  }
+}
+
+.event {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: $background-color__light-green;
+
+  &__name {
+    margin-left: 10px;
+  }
+
+  &__icon {
+    margin: 0 10px 0 auto;
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.question-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 375px;
+  left: 659px;
+  height: 298px;
+  width: 598px;
+  border: 2px solid $border-color__black;
+  border-radius: 20px;
+  font-size: $font-size-medium;
+  background-color: #fff;
+  text-align: center;
+}
+
+.buttons-holder {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 160px;
+}
+
+.option-button {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 250px;
+  border: 2px solid $border-color__black;
+  border-radius: 10px;
+  font-size: $font-size-large;
+}
+
+.hidden {
+  display: none;
+}
